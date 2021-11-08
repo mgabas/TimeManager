@@ -1,0 +1,20 @@
+name: TimeManager APP CI (elixir api + vue front)
+
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  pipeline:
+
+    runs-on: unbuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: git pull
+
+      - run: docker-compose build
+
+      - run: docker-compose up -d
