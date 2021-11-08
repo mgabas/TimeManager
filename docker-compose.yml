@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  phoenix:
+    # image: xavierdelattre/phoenix_docker:latest
+    build:
+      context: api/
+    container_name: phoenix
+    environment:
+      PGUSER: postgres
+      PGPORT: 5432
+      PGHOST: db
+      PGPASSWORD: postgres
+      PGDATABASE: project_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: project_dev
+      POSTGRES_PORT: 5432
+      #     POSTGRES_HOST: database
+      POSTGRES_HOST: localhost
+    network_mode: "host"
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: postgres:11-alpine
+    container_name: db
+    environment:
+      PGUSER: postgres
+      PGPORT: 5432
+      PGHOST: db
+      PGPASSWORD: postgres
+      PGDATABASE: project_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: project_dev
+      POSTGRES_PORT: 5432
+      #     POSTGRES_HOST: database
+      POSTGRES_HOST: localhost
+
+      ALLOW_IP_RANGE: 0.0.0.0/0
+    ports:
+      - "127.0.0.1:5432:5432"
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  front:
+    build:
+      context: app/
+    ports:
+      - "8080:8080"
+volumes:
+  pgdata:

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Moon" transform="matrix(13.4583,2.14985e-30,-1.65887e-31,13.4167,-1201.54,-2410.2)">
+        <path d="M114.677,190.003C110.168,191.884 107,196.334 107,201.524C107,208.416 112.587,214.003 119.479,214.003C124.669,214.003 129.119,210.834 131,206.326C129.522,206.943 127.9,207.283 126.198,207.283C119.306,207.283 113.719,201.696 113.719,194.805C113.719,193.103 114.06,191.481 114.677,190.003Z"/>
+    </g>
+</svg>

@@ -1,0 +1,2280 @@
+{
+	"info": {
+		"_postman_id": "d9aad02e-a904-49b6-851f-0d0a84f12eed",
+		"name": "API Time Manager",
+		"description": "Time Manager API.\nUsed in the Time Manager project for the Epitech MSC 2023 Pool.\nRoutes root are : http://localhost:4000/api/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User By Email And Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users?email=ojfiu@aozif.izaufe&username=iabfyui",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ojfiu@aozif.izaufe",
+									"description": "email of user"
+								},
+								{
+									"key": "username",
+									"value": "iabfyui",
+									"description": "username of user"
+								}
+							]
+						},
+						"description": "Return a JSON with information about a user.\nTake an email and a username as query parameter."
+					},
+					"response": [
+						{
+							"name": "Get User By Email And Username",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users?email=example@example.com&username=ExampleUsername",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "example@example.com",
+											"description": "email of user"
+										},
+										{
+											"key": "username",
+											"value": "ExampleUsername",
+											"description": "username of user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"email\": \"JP@clooooooope.com\",\n            \"id\": \"3ad97a32-75d5-401c-892a-e134b410b32c\",\n            \"username\": \"JeanPopol\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "082cd5af-b04a-4b07-8939-8cc08be2945a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "082cd5af-b04a-4b07-8939-8cc08be2945a",
+											"description": "ID of the user to find"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"ronan@example.com\",\n        \"id\": \"082cd5af-b04a-4b07-8939-8cc08be2945a\",\n        \"job\": \"Employee\",\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjI5NDUyNywiaWF0IjoxNjM2Mjg3MzI3LCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWs1OXQ5YW05ZjEzbDdxczAwMDNsNCIsIm5iZiI6MTYzNjI4NzMyN30.nlq_oKp6aC_AvYR-dwHGyuncKUxDJZjAyemCE5_ECLc\",\n        \"username\": \"ronan\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User By Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/token/:token",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"token",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						},
+						"description": "Return a JSON with information about a user.\nTake a user ID as query parameter."
+					},
+					"response": [
+						{
+							"name": "Get User By Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/token/:token",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										"token",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjEzNzY1MSwiaWF0IjoxNjM2MTMwNDUxLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWI3dWhmZXMxb3FrZXRubzAwMDIzNSIsIm5iZiI6MTYzNjEzMDQ1MX0.FeUydAJmivwsjPeg0O2WlZkJuHbl28gKG398YxHlkdg"
+										},
+										{
+											"value": "3ad97a32-75d5-401c-892a-e134b410b32c",
+											"key": "userid"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"newmail@mail.com\",\n        \"id\": \"1c1d87bb-ee30-4016-aef5-938e0f25278a\",\n        \"job\": \"Employee\",\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjEzNzY1MSwiaWF0IjoxNjM2MTMwNDUxLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWI3dWhmZXMxb3FrZXRubzAwMDIzNSIsIm5iZiI6MTYzNjEzMDQ1MX0.FeUydAJmivwsjPeg0O2WlZkJuHbl28gKG398YxHlkdg\",\n        \"username\": \"Pulvi\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Team Members By Team ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/members/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"members",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20c8b2e2-9365-42e5-b086-c3dca2f2c5ad",
+									"description": "ID of the team"
+								}
+							]
+						},
+						"description": "Return JSON informations of all users for a given team."
+					},
+					"response": [
+						{
+							"name": "Get Team Members By Team ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/members/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										"members",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null,
+											"description": "ID of the team"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": [\r\n        {\r\n            \"email\": \"lolo@example.com\",\r\n            \"id\": \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\r\n            \"job\": \"Employee\",\r\n            \"username\": \"Lohan\"\r\n        },\r\n        {\r\n            \"email\": \"newmail@mail.com\",\r\n            \"id\": \"3ad97a32-75d5-401c-892a-e134b410b32c\",\r\n            \"job\": \"Administrator\",\r\n            \"username\": \"Pulvi\"\r\n        },\r\n        {\r\n            \"email\": \"test@test.com\",\r\n            \"id\": \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\r\n            \"job\": \"Manager\",\r\n            \"username\": \"test\"\r\n        },\r\n        {\r\n            \"email\": \"example@example.com\",\r\n            \"id\": \"f56ff938-3055-45fc-b685-c7afcc010778\",\r\n            \"job\": \"Employee\",\r\n            \"username\": \"Username\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"users\": {\r\n        \"username\": \"Boyito\",\r\n        \"email\": \"Boyito@example.com\",\r\n        \"job\": \"Administrator\",\r\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Create a user.\nTake a JSON body, with a username and email field inside a users object.\nSee left side documentation for an example."
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"users\": {\r\n        \"username\": \"Username\",\r\n        \"email\": \"example@example.com\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"lolo@example.com\",\n        \"id\": \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\n        \"username\": \"Lohan\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Log In User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"users\": {\r\n        \"email\": \"ronan@example.com\",\r\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/sign-in",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"sign-in"
+							]
+						},
+						"description": "Authenticate a user and return his JSON token."
+					},
+					"response": [
+						{
+							"name": "Log In User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/sign-in",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										"sign-in"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"Okok@example.com\",\n        \"id\": \"cb9593ed-9b2d-470e-b038-1ac4a9ecb65b\",\n        \"job\": \"Manager\",\n        \"password\": \"pass\",\n        \"token\": \"Here token\",\n        \"username\": \"Okok\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Log Out User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"users\": {\r\n        \"email\": \"ronan@example.com\",\r\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/logout",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Log Out User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"users\": {\r\n        \"email\": \"ronan@example.com\",\r\n        \"password\": \"4535f470996d64296e167f226c8f52fd19e4332003253a023038e3ccedcf4b05\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/logout",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										"logout"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update User With User ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"users\": {\r\n        \"username\": \"Pulvi\",\r\n        \"email\": \"newmail@mail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "1c1d87bb-ee30-4016-aef5-938e0f25278a"
+								}
+							]
+						},
+						"description": "Create a user.\nTake a user ID as query parameter."
+					},
+					"response": [
+						{
+							"name": "Update User With ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "f56ff938-3055-45fc-b685-c7afcc010778",
+											"description": "ID of the user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"email\": \"newmail@mail.com\",\n        \"id\": \"3ad97a32-75d5-401c-892a-e134b410b32c\",\n        \"username\": \"Pulvi\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/users/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "d5042d0c-df95-4174-91d4-ed1c2883833a",
+									"description": "ID of the user"
+								}
+							]
+						},
+						"description": "Delete a user in the DataBase.\nTake a user ID as query parameter."
+					},
+					"response": [
+						{
+							"name": "Delete User By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/users/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "3ad97a32-75d5-401c-892a-e134b410b32c",
+											"description": "ID of the user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "All routes in http://localhost:4000/api/users/\nTheses routes are used to perform actions with users.\nYou can create/delete or get informations on users."
+		},
+		{
+			"name": "Working Time",
+			"item": [
+				{
+					"name": "Get Working Time with ID start and end",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/:userID?start=2021-10-27 11:41:12&end=2021-10-27 11:41:12",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								":userID"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2021-10-27 11:41:12",
+									"description": "Start of user to find"
+								},
+								{
+									"key": "end",
+									"value": "2021-10-27 11:41:12",
+									"description": "End of user to find"
+								}
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "f56ff938-3055-45fc-b685-c7afcc010778",
+									"description": "ID of the users"
+								}
+							]
+						},
+						"description": "Get working time informations as JSON format which corresponds to given userID, start and end field.\nUserID, Start and End are query parameters."
+					},
+					"response": [
+						{
+							"name": "Get Working Time with ID start and end",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:userID?start=2021-10-27 11:41:12&end=2021-10-27 11:41:12",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":userID"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2021-10-27 11:41:12",
+											"description": "Start of user to find"
+										},
+										{
+											"key": "end",
+											"value": "2021-10-27 11:41:12",
+											"description": "End of user to find"
+										}
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "d5042d0c-df95-4174-91d4-ed1c2883833a",
+											"description": "ID of the users"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"end\": \"2021-10-27T11:41:12Z\",\n        \"id\": \"34a46e7c-5b05-4be3-aa2f-f4c2879d3858\",\n        \"start\": \"2021-10-27T11:41:12Z\",\n        \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Working Time By User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1c1d87bb-ee30-4016-aef5-938e0f25278a",
+									"description": "ID of the user to find"
+								}
+							]
+						},
+						"description": "Return a working time informations as JSON.\nWorking time ID is sent by query parameter."
+					},
+					"response": [
+						{
+							"name": "Get Working Time By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "f56ff938-3055-45fc-b685-c7afcc010778",
+											"description": "ID of the user to find"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"end\": \"2021-10-27T11:41:12Z\",\n            \"id\": \"34a46e7c-5b05-4be3-aa2f-f4c2879d3858\",\n            \"start\": \"2021-10-27T11:41:12Z\",\n            \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Working Time By Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/token/:token",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								"token",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Working Time By Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/token/:token",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										"token",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjEzNzY1MSwiaWF0IjoxNjM2MTMwNDUxLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWI3dWhmZXMxb3FrZXRubzAwMDIzNSIsIm5iZiI6MTYzNjEzMDQ1MX0.FeUydAJmivwsjPeg0O2WlZkJuHbl28gKG398YxHlkdg"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"end\": \"2021-10-28T18:01:50Z\",\n            \"id\": \"8ebad14b-5f19-4098-95cf-9b00e65bda1b\",\n            \"start\": \"2021-10-28T13:01:46Z\",\n            \"users\": \"1c1d87bb-ee30-4016-aef5-938e0f25278a\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Working Time By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/id/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								"id",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3f89080e-4156-44aa-9219-bd5233085381"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Working Time By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "34a46e7c-5b05-4be3-aa2f-f4c2879d3858",
+											"description": "ID of the working time"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": {\r\n        \"end\": \"1900-10-27T11:41:12Z\",\r\n        \"id\": \"34a46e7c-5b05-4be3-aa2f-f4c2879d3858\",\r\n        \"start\": \"2021-10-27T11:41:12Z\",\r\n        \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Working Times",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								""
+							]
+						},
+						"description": "This call returns a JSON format containing all current working times that are saved for all users."
+					},
+					"response": [
+						{
+							"name": "Get All Working Times",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"end\": \"2021-10-27T11:41:12Z\",\n            \"id\": \"34a46e7c-5b05-4be3-aa2f-f4c2879d3858\",\n            \"start\": \"2021-10-27T11:41:12Z\",\n            \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\n        },\n        {\n            \"end\": \"2021-10-28T08:16:41Z\",\n            \"id\": \"4c804f91-de99-4f30-b338-a5517b61bd8b\",\n            \"start\": \"2021-10-28T08:16:41Z\",\n            \"users\": \"3ad97a32-75d5-401c-892a-e134b410b32c\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Working Time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workingtimes\" : {\r\n        \"start\": \"2021-10-28 13:01:46\",\r\n        \"end\": \"2021-10-28 18:01:50\",\r\n        \"users\": \"1c1d87bb-ee30-4016-aef5-938e0f25278a\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes"
+							]
+						},
+						"description": "Create a working time. Take the user ID of the working time in query parameter."
+					},
+					"response": [
+						{
+							"name": "Create Working Time",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "1df0ce27-4632-41ea-bd74-6c1932ff2185",
+											"description": "ID of the user"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"end\": \"2021-10-28T09:18:41Z\",\n        \"id\": \"b8d69496-918d-4459-8923-ce3ab1967bf0\",\n        \"start\": \"2021-10-28T09:18:41Z\",\n        \"users\": \"1df0ce27-4632-41ea-bd74-6c1932ff2185\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Working Time",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workingtimes\": {\r\n        \"start\": \"2021-10-27 11:41:12\",\r\n        \"end\": \"1900-10-27 11:41:12\",\r\n        \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "34a46e7c-5b05-4be3-aa2f-f4c2879d3858",
+									"description": "ID of the working time"
+								}
+							]
+						},
+						"description": "Create a working time. Take the working time id as query parameter."
+					},
+					"response": [
+						{
+							"name": "Update Working Time",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"workingtimes\": {\r\n        \"start\": \"2021-10-27 11:41:12\",\r\n        \"end\": \"1900-10-27 11:41:12\",\r\n        \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "34a46e7c-5b05-4be3-aa2f-f4c2879d3858",
+											"description": "ID of the working time"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"end\": \"1900-10-27T11:41:12Z\",\n        \"id\": \"34a46e7c-5b05-4be3-aa2f-f4c2879d3858\",\n        \"start\": \"2021-10-27T11:41:12Z\",\n        \"users\": \"f56ff938-3055-45fc-b685-c7afcc010778\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Working Time By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"workingtimes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "34a46e7c-5b05-4be3-aa2f-f4c2879d3858",
+									"description": "ID of the working time"
+								}
+							]
+						},
+						"description": "Delete a working time. Take the working time ID to delete as query parameter."
+					},
+					"response": [
+						{
+							"name": "Delete Working Time By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/workingtimes/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"workingtimes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "34a46e7c-5b05-4be3-aa2f-f4c2879d3858",
+											"description": "ID of the working time"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "All routes in http://localhost:4000/api/workingtimes/\nTheses routes are used to perform actions with working times.\nYou can create/delete or get informations on working times."
+		},
+		{
+			"name": "Clocking",
+			"item": [
+				{
+					"name": "Get Clock By User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/clocks/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"clocks",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "1c1d87bb-ee30-4016-aef5-938e0f25278a",
+									"description": "ID of the user"
+								}
+							]
+						},
+						"description": "Get the clock informations of a user. Take the user id as query parameter."
+					},
+					"response": [
+						{
+							"name": "Get Clock By User ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/clocks/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"clocks",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "b6fce94a-50be-4e9a-8cc8-2c754e83920d",
+											"description": "ID of the user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"0b7ee445-9862-4f60-9366-2e0c2171b08a\",\n        \"status\": false,\n        \"time\": \"2021-10-27T11:41:12Z\",\n        \"users\": \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Clock By Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/clocks/token/:token",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"clocks",
+								"token",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjEzNzY1MSwiaWF0IjoxNjM2MTMwNDUxLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWI3dWhmZXMxb3FrZXRubzAwMDIzNSIsIm5iZiI6MTYzNjEzMDQ1MX0.FeUydAJmivwsjPeg0O2WlZkJuHbl28gKG398YxHlkdg"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Clock By Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/clocks/token/:token",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"clocks",
+										"token",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJKb2tlbiIsImV4cCI6MTYzNjEzNzY1MSwiaWF0IjoxNjM2MTMwNDUxLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJxcWI3dWhmZXMxb3FrZXRubzAwMDIzNSIsIm5iZiI6MTYzNjEzMDQ1MX0.FeUydAJmivwsjPeg0O2WlZkJuHbl28gKG398YxHlkdg"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Create Clock With User ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/clocks/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"clocks",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "1c1d87bb-ee30-4016-aef5-938e0f25278a",
+									"description": "ID of the user"
+								}
+							]
+						},
+						"description": "Create a clock for a user.\nTake a user ID as query parameter."
+					},
+					"response": [
+						{
+							"name": "Create Clock With User ID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/clocks/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"clocks",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "3ad97a32-75d5-401c-892a-e134b410b32c",
+											"description": "ID of the user"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"3868f086-ccd5-4a62-a951-6291c7dd043e\",\n        \"status\": false,\n        \"time\": \"2021-10-28T09:18:41Z\",\n        \"users\": \"3ad97a32-75d5-401c-892a-e134b410b32c\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Clock Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/clocks?userid=b6fce94a-50be-4e9a-8cc8-2c754e83920d&status=false&time=2019-10-27 11:41:12",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"clocks"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "b6fce94a-50be-4e9a-8cc8-2c754e83920d"
+								},
+								{
+									"key": "status",
+									"value": "false"
+								},
+								{
+									"key": "time",
+									"value": "2019-10-27 11:41:12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Clock Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/clocks?username=Pulvi&status=true",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"clocks"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "Pulvi"
+										},
+										{
+											"key": "status",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": {\r\n        \"id\": \"3868f086-ccd5-4a62-a951-6291c7dd043e\",\r\n        \"status\": false,\r\n        \"time\": \"2021-10-28T09:18:41Z\",\r\n        \"users\": \"3ad97a32-75d5-401c-892a-e134b410b32c\"\r\n    }\r\n}"
+						}
+					]
+				}
+			],
+			"description": "All routes in http://localhost:4000/api/clocks/\nTheses routes are used to perform actions with clocks.\nYou can create/delete or get informations on clocks."
+		},
+		{
+			"name": "Charts",
+			"item": [
+				{
+					"name": "Get Charts Infos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/charts/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"charts",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "ff006ea7-b92d-455f-a6f9-cd33a1a42225",
+									"description": "ID of the user associated to the chart"
+								}
+							]
+						},
+						"description": "Get all charts informations corresponding to a user."
+					},
+					"response": [
+						{
+							"name": "Get Charts Infos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/charts/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"charts",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "ff006ea7-b92d-455f-a6f9-cd33a1a42225",
+											"description": "ID of the user associated to the chart"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": {\r\n        \"chart1\": false,\r\n        \"chart2\": false,\r\n        \"chart3\": true,\r\n        \"id\": \"7fec0dd0-7f26-43a4-a026-bb5b5520a911\"\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Charts Infos By Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/charts/token/:token",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"charts",
+								"token",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Charts Infos By Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/charts/token/:token",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"charts",
+										"token",
+										":token"
+									],
+									"variable": [
+										{
+											"key": "token",
+											"value": null
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"chart1\": false,\n        \"chart2\": false,\n        \"chart3\": false,\n        \"id\": \"2ae10bcd-6dc7-497d-af65-2bb5591ad2fe\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Chart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/charts/:userID",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"charts",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": "1c1d87bb-ee30-4016-aef5-938e0f25278a",
+									"description": "ID of the user associated to the chart"
+								}
+							]
+						},
+						"description": "Create and save a new chart object from a User ID."
+					},
+					"response": [
+						{
+							"name": "Create Chart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/charts/:userID",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"charts",
+										":userID"
+									],
+									"variable": [
+										{
+											"key": "userID",
+											"value": "ff006ea7-b92d-455f-a6f9-cd33a1a42225",
+											"description": "ID of the user associated to the chart"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": {\r\n        \"chart1\": false,\r\n        \"chart2\": false,\r\n        \"chart3\": false,\r\n        \"id\": \"259f1610-e0b2-4167-8103-3fc21f91d396\"\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Chart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"charts\": {\r\n        \"user\": \"ff006ea7-b92d-455f-a6f9-cd33a1a42225\",\r\n        \"chart1\": true,\r\n        \"chart2\": true,\r\n        \"chart3\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/charts/",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"charts",
+								""
+							]
+						},
+						"description": "Update a chart with informations passed by JSON."
+					},
+					"response": [
+						{
+							"name": "Update Chart",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"charts\": {\r\n        \"user\": \"ff006ea7-b92d-455f-a6f9-cd33a1a42225\",\r\n        \"chart1\": false,\r\n        \"chart2\": true,\r\n        \"chart3\": true\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/charts/",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"charts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"chart1\": false,\n        \"chart2\": true,\n        \"chart3\": true,\n        \"id\": \"7fec0dd0-7f26-43a4-a026-bb5b5520a911\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Theses routes interacts whith charts informations."
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Get Team By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20c8b2e2-9365-42e5-b086-c3dca2f2c5ad",
+									"description": "ID of the team to find"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Team By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "f82fc507-5246-4cf3-ac7b-01c79c6f054",
+											"description": "ID of the team to find"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"data\": {\r\n        \"id\": \"edd633e8-81b6-4753-b215-cc351ee14f72\",\r\n        \"members\": [\r\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\r\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\",\r\n            \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\r\n            \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n        ],\r\n        \"name\": \"TeamName\",\r\n        \"night_team\": true\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Team By User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/user/:userid",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								"user",
+								":userid"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": "1df0ce27-4632-41ea-bd74-6c1932ff2185",
+									"description": "ID of the user ID to find the associated teams"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Team By User ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/user/:userid",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										"user",
+										":userid"
+									],
+									"variable": [
+										{
+											"key": "userid",
+											"value": null,
+											"description": "ID of the user ID to find the associated teams"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get All Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								""
+							]
+						},
+						"description": "Return a JSON containing all teams stored with all their informations."
+					},
+					"response": [
+						{
+							"name": "Get All Teams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"f82fc507-5246-4cf3-ac7b-01c79c6f054d\",\n            \"members\": [\n                \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\n                \"3ad97a32-75d5-401c-892a-e134b410b32c\"\n            ],\n            \"name\": \"TeamName\",\n            \"night_team\": true\n        },\n        {\n            \"id\": \"edd633e8-81b6-4753-b215-cc351ee14f72\",\n            \"members\": [\n                \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\n                \"3ad97a32-75d5-401c-892a-e134b410b32c\",\n                \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\n                \"f56ff938-3055-45fc-b685-c7afcc010778\"\n            ],\n            \"name\": \"TeamName\",\n            \"night_team\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"team\": {\r\n        \"name\": null,\r\n        \"members\" : [\r\n            \"d5042d0c-df95-4174-91d4-ed1c2883833a\",\r\n            \"d666dcb3-82cf-438a-9698-fcd8762c73ec\"\r\n        ],\r\n        \"night_team\": true,\r\n        \"manager\": \"d5042d0c-df95-4174-91d4-ed1c2883833a\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								""
+							]
+						},
+						"description": "Create a team based on a JSON containing name, members and night_team of the team."
+					},
+					"response": [
+						{
+							"name": "Create Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"team\": {\r\n        \"name\": \"TeamName\",\r\n        \"members\" : [\r\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\r\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\"\r\n        ],\r\n        \"night_team\": true,\r\n        \"manager\": \"d5042d0c-df95-4174-91d4-ed1c2883833a\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"f82fc507-5246-4cf3-ac7b-01c79c6f054d\",\n        \"members\": [\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\"\n        ],\n        \"name\": \"TeamName\",\n        \"night_team\": true,\n        \"manager\": \"d5042d0c-df95-4174-91d4-ed1c2883833a\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Team By ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"team\": {\r\n        \"name\": \"UpdatedTeam\",\r\n        \"members\": [\r\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\r\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\",\r\n            \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\r\n            \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n        ],\r\n        \"night_team\": false,\r\n        \"manager\": \"d5042d0c-df95-4174-91d4-ed1c2883833a\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20c8b2e2-9365-42e5-b086-c3dca2f2c5ad",
+									"description": "ID of the team to update"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Team By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"team\": {\r\n        \"name\": \"UpdatedTeam\",\r\n        \"members\": [\r\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\r\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\",\r\n            \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\r\n            \"f56ff938-3055-45fc-b685-c7afcc010778\"\r\n        ],\r\n        \"night_team\": false\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "edd633e8-81b6-4753-b215-cc351ee14f72",
+											"description": "ID of the team to update"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"edd633e8-81b6-4753-b215-cc351ee14f72\",\n        \"members\": [\n            \"1df0ce27-4632-41ea-bd74-6c1932ff2185\",\n            \"3ad97a32-75d5-401c-892a-e134b410b32c\",\n            \"b6fce94a-50be-4e9a-8cc8-2c754e83920d\",\n            \"f56ff938-3055-45fc-b685-c7afcc010778\"\n        ],\n        \"name\": \"UpdatedTeam\",\n        \"night_team\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Team By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://134.209.31.125:4000/api/teams/:id",
+							"protocol": "http",
+							"host": [
+								"134",
+								"209",
+								"31",
+								"125"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"teams",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68e24cda-0e82-4595-9a40-ca52a4201525",
+									"description": "ID of the team to delete\n"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Team By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://134.209.31.125:4000/api/teams/:id",
+									"protocol": "http",
+									"host": [
+										"134",
+										"209",
+										"31",
+										"125"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"teams",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Folder containing all routes used to manage teams."
+		}
+	]
+}
