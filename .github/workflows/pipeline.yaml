@@ -10,10 +10,12 @@ jobs:
 
     runs-on: unbuntu-latest
 
+    name: Try to pull
     steps:
-      - uses: actions/checkout@v2
+      - name: git checkout
+        uses: actions/checkout@v2
 
-      name: git pull
+      - name: git pull
         run: git pull
 
 #      - run: docker-compose build
